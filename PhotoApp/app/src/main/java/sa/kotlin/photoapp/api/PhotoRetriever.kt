@@ -9,6 +9,7 @@ class PhotoRetriever {
 
     private val service: PhotoApi
 
+    // initializer block
     init {
         val retrofit = Retrofit.Builder()
                 .baseUrl("https://pixabay.com/api/")

@@ -10,8 +10,11 @@ import sa.kotlin.photoapp.models.Photo
 
 class DetailActivity : AppCompatActivity() {
 
+    //useful for creating {with some reservations https://kotlinlang.org/docs/reference/object-declarations.html#companion-objects }
+    // static annotated values, func.
     companion object {
         val PHOTO_KEY = "PhotoKey"
+        @JvmStatic
         fun start(context: Context, photo: Photo) {
             val intent: Intent = Intent(context, DetailActivity::class.java)
             intent.putExtra(PHOTO_KEY, photo)

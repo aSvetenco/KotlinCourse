@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun getPhotos() {
         val retriever = PhotoRetriever()
+        //object - smth common with anonymous classes in java {@link https://kotlinlang.org/docs/reference/object-declarations.html}
         retriever.getPhotos(object: Callback<PhotoList> {
             override fun onFailure(call: Call<PhotoList>?, t: Throwable?) {
                 Log.d(TAG, "GetPhotosFail", t)
